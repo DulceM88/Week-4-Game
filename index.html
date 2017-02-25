@@ -2,11 +2,11 @@
 <html>
 <head>
 	<title> Space Traveller! </title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href=""> <!-- bootstrap-->
-	<link rel="stylesheet" type="text/css" href=""><!--custom css -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href=""> <!-- bootstrap Template-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"><!--custom css -->
+	
+	<script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
  <!-- Overall Bootstrap Grid -->
@@ -25,7 +25,7 @@
 		    				<h3 class="panel-title">Distance to Travel</h3>
 		  				</div>
 		  					<div class="panel-body">
-		    					<h5> Distance: </h5>
+		    					<h5> Distance: <span id="random-distance"></span> </h5>
 		 					</div>
 					</div>
 	  			</div>
@@ -36,9 +36,9 @@
 		    				<h3 class="panel-title">Captains Log</h3>
 		  				</div>
 		  					<div class="panel-body">
-		    					<h5> Planets Visited: </h5>
+		    					<h5> Planets Visited: <span id="visit-counter"></span> </h5>
 		    					<br>
-		    					<h5> Planets Passed: </h5>
+		    					<h5> Planets Passed: <span id="pass-counter"></span> </h5>
 		 					</div>
 					</div>
 			  	</div>
@@ -49,7 +49,10 @@
 		    				<h3 class="panel-title">Controls</h3>
 		  				</div>
 		  					<div class="panel-body">
-		    					<img class="img-responsive" src= "">
+		    					<img class="img-responsive controlPannel" id= "controlPannel1" src= "assets/images/controls/wormhole.jpg">
+		    					<img class="img-responsive controlPannel" id= "controlPannel2" src= "assets/images/controls/overheadControls.jpg">
+		    					<img class="img-responsive controlPannel" id= "controlPannel3" src= "assets/images/controls/Joystick.jpg">
+		    					<img class="img-responsive controlPannel" id= "controlPannel4" src= "assets/images/controls/ludicrous.png">
 		 					</div>
 					</div>
 	    		</div>
@@ -60,7 +63,7 @@
 		    				<h3 class="panel-title">Distance Currently Travelled</h3>
 		  				</div>
 		  					<div class="panel-body">
-		    					<h5> Planets Visited: </h5>
+		    					<h5> Current Distance: <span id="current-distance"></span> </h5>
 		    				</div>
 					</div>
 			  	</div>
@@ -72,7 +75,7 @@
 		
 		<!-- Stellar Image -->
 			  	<div class="col-lg-6">
-			  		<img class="img-responsive" src="assets/images/planets/planet2.gif">
+			  		<img class="img-responsive stellarImage" src="assets/images/planets/planet2.gif">
 			  	</div>
 			
 
