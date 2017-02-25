@@ -32,6 +32,28 @@ function gameBegin(){
 
 }
 
+function gameContinue(){
+	randomDistance= Math.floor(Math.random() * 120) + 13;
+	$("#random-distance").text(randomDistance);
+
+	controlVal1 = randomValBank[Math.floor(Math.random() * randomValBank.length)];
+	controlVal2 = randomValBank[Math.floor(Math.random() * randomValBank.length)];
+	controlVal3 = randomValBank[Math.floor(Math.random() * randomValBank.length)];
+	controlVal4 = randomValBank[Math.floor(Math.random() * randomValBank.length)];
+
+	currentDistance=0;
+	$("#current-distance").text(currentDistance);
+
+}
+
+/*	attempting to reload image every time game is continued
+	function resetDestination{
+
+    var images = [];
+    $("#stellarImage").css({'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+   }
+}*/
+
  $("#controlPannel1").on("click", function() {
  		
  		currentDistance= controlVal1 + currentDistance;
@@ -41,14 +63,18 @@ function gameBegin(){
 		}
 		if (currentDistance> randomDistance){
 				alert("oh no you passed the planet");
-				//$("#current-distance").text(currentDistance);
+				
 				passCounter++;
+				$("#pass-counter").text(passCounter);
+				gameContinue();
 
 		}
 		if (currentDistance===randomDistance){
 				alert("You have reached your destination!");
-				//$("#current-distance").text(currentDistance);
+				
 				visitCounter++;
+				$("#visit-counter").text(visitCounter);
+				gameContinue();
 		}
 
       });
@@ -64,12 +90,16 @@ function gameBegin(){
 				alert("oh no you passed the planet");
 				$("#current-distance").text(currentDistance);
 				passCounter++;
+				$("#pass-counter").text(passCounter);
+				gameContinue();
 
 		}
 		if (currentDistance===randomDistance){
 				alert("You have reached your destination!");
 				$("#current-distance").text(currentDistance);
 				visitCounter++;
+				$("#visit-counter").text(visitCounter);
+				gameContinue();
 		}
 
       });
@@ -85,12 +115,16 @@ function gameBegin(){
 				alert("oh no you passed the planet");
 				$("#current-distance").text(currentDistance);
 				passCounter++;
+				$("#pass-counter").text(passCounter);
+				gameContinue();
 
 		}
 		if (currentDistance===randomDistance){
 				alert("You have reached your destination!");
 				$("#current-distance").text(currentDistance);
 				visitCounter++;
+				$("#visit-counter").text(visitCounter);
+				gameContinue();
 		}
 
       });
@@ -106,12 +140,16 @@ function gameBegin(){
 				alert("oh no you passed the planet");
 				$("#current-distance").text(currentDistance);
 				passCounter++;
+				$("#pass-counter").text(passCounter);
+				gameContinue();
 
 		}
 		if (currentDistance===randomDistance){
 				alert("You have reached your destination!");
 				$("#current-distance").text(currentDistance);
 				visitCounter++;
+				$("#visit-counter").text(visitCounter);
+				gameContinue();
 		}
 
       });
